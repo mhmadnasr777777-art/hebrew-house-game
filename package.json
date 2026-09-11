@@ -1,0 +1,39 @@
+{
+  "name": "hebrew-house-game",
+  "version": "1.0.0",
+  "description": "3D interactive house exploration game entirely in Hebrew - WASD movement, mouse camera control, click to interact with objects",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "npx http-server",
+    "dev": "npx live-server"
+  },
+  "keywords": [
+    "game",
+    "3d",
+    "hebrew",
+    "interactive",
+    "three.js",
+    "webgl",
+    "first-person",
+    "house",
+    "exploration"
+  ],
+  "author": "EAGLE.RP (mhmadnasr777777)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mhmadnasr777777-art/hebrew-house-game.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mhmadnasr777777-art/hebrew-house-game/issues"
+  },
+  "homepage": "https://github.com/mhmadnasr777777-art/hebrew-house-game#readme",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  }
+}
