@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>לעבת הבית - House Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            background: #000;
+        }
+
+        #gameContainer {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        #canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        #ui {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 14px;
+            direction: rtl;
+            text-align: right;
+            max-width: 300px;
+        }
+
+        #controls {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 12px;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .control-item {
+            margin-bottom: 8px;
+        }
+
+        #interactPrompt {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 0, 0.9);
+            color: #000;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-align: center;
+            display: none;
+            z-index: 100;
+            animation: pulse 0.6s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.1); }
+        }
+
+        .location-info {
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffff00;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <div id="ui">
+            <div class="location-info" id="locationDisplay">הבית שלי</div>
+            <div id="hebrewText"></div>
+        </div>
+        <div id="controls">
+            <div class="control-item"><strong>עברית - Hebrew Controls:</strong></div>
+            <div class="control-item">W / W - קדימה (Forward)</div>
+            <div class="control-item">S / S - אחורה (Back)</div>
+            <div class="control-item">A / A - שמאלה (Left)</div>
+            <div class="control-item">D / D - ימינה (Right)</div>
+            <div class="control-item">🖱️ - סובב מצלמה (Rotate Camera)</div>
+            <div class="control-item">🖱️ Click - תקשר עם פריטים (Interact)</div>
+        </div>
+        <div id="interactPrompt">E לתקשורת</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
